@@ -1,0 +1,47 @@
+exchange:
+  id: "binance"
+  symbol: "ETH/USDT"
+  timeframe: "5m"
+  market_type: "spot"
+trading:
+  timezone: "Africa/Cairo"
+  trade_start: "16:30"
+  trade_end: "19:00"
+  poll_interval_seconds: 10
+  max_candle_age_seconds: 600
+account:
+  core_capital_usd: 100.0
+  risk_bucket_usd: 100.0
+risk:
+  max_risk_per_trade_usd: 2.0
+  max_daily_loss_usd: 4.0
+  max_weekly_loss_usd: 12.0
+  max_trades_per_day: 2
+  max_losses_per_day: 2
+  max_open_positions: 1
+  min_reward_risk: 2.0
+  cooldown_minutes_after_trade: 20
+  pause_if_risk_bucket_below_usd: 80.0
+  max_position_notional_usd: 100.0
+strategy:
+  lookback_candles: 12
+  retest_max_candles: 5
+  retest_tolerance_pct: 0.001
+  stop_buffer_pct: 0.0005
+  target_r_multiple: 2.0
+  long_only: true
+filters:
+  max_spread_pct: 0.0008
+  max_signal_candle_range_pct: 0.015
+  min_quote_volume_usd: 0.0
+execution:
+  entry_order_type: "limit"
+  stop_order_type: "stop_loss"
+  take_profit_order_type: "limit"
+  cancel_entry_after_seconds: 120
+  post_only_entries: false
+storage:
+  sqlite_path: "data/bot.db"
+logging:
+  log_path: "logs/bot.log"
+  level: "INFO"

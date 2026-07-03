@@ -1,0 +1,11 @@
+services:
+  eth-sweep-bot:
+    build: .
+    container_name: eth-sweep-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
