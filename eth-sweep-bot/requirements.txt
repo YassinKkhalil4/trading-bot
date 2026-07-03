@@ -1,0 +1,10 @@
+ccxt
+pandas
+pydantic
+python-dotenv
+PyYAML
+requests
+loguru
+python-dateutil
+pytz
+pytest
